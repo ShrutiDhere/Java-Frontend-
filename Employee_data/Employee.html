@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Employee Management System</h2>
+
+    <form action ="process_employee"method="post">
+            <legend><b>Employee Details</b></legend>
+
+            <table cellpadding="8">
+
+                <tr>
+                    <td>1. Employee ID:</td>
+                    <td><input type="text" name="emp_id" required></td>
+                </tr>
+
+                <tr>
+                    <td>2. First Name:</td>
+                    <td><input type="text" name="first_name" required></td>
+                </tr>
+
+                <tr>
+                    <td>3. Last Name:</td>
+                    <td><input type="text" name="last_name" required></td>
+                </tr>
+
+                <tr>
+                    <td>4. Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                        <input type="radio" name="gender" value="Other"> Other
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5. Date of Birth:</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+
+                <tr>
+                    <td>6. Email:</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td>7. Mobile Number:</td>
+                    <td><input type="tel" name="Mobile No"></td>
+                </tr>
+
+                <tr>
+                    <td>8. Address:</td>
+                    <td><textarea name="address" rows="3" cols="22"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>9. City:</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+
+                <tr>
+                    <td>10. State:</td>
+                    <td><input type="text" name="state"></td>
+                </tr>
+
+                <tr>
+                    <td>11. Postal Code:</td>
+                    <td><input type="text" name="postal_code"></td>
+                </tr>
+
+                <tr>
+                    <td>12. Country:</td>
+                    <td><input type="text" name="country"></td>
+                </tr>
+
+                <tr>
+                    <td>13. Department:</td>
+                    <td>
+                        <select name="department">
+                            <option value="">Select</option>
+                            <option>HR</option>
+                            <option>IT</option>
+                            <option>Finance</option>
+                            <option>Marketing</option>
+                            <option>Sales</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>14. Job Title:</td>
+                    <td><input type="text" name="job_title"></td>
+                </tr>
+
+                <tr>
+                    <td>15. Date of Joining:</td>
+                    <td><input type="date" name="joining_date"></td>
+                </tr>
+
+                <tr>
+                    <td>16. Employment Type:</td>
+                    <td>
+                        <select name="employment_type">
+                            <option value="">Select</option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>Intern</option>
+                            <option>Contract</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>17. Salary:</td>
+                    <td><input type="number" name="salary"></td>
+                </tr>
+
+                <tr>
+                    <td>18. Work Location:</td>
+                    <td><input type="text" name="work_location"></td>
+                </tr>
+
+                <tr>
+                    <td>19. Manager Name:</td>
+                    <td><input type="text" name="manager_name"></td>
+                </tr>
+
+                <tr>
+                    <td>20. Emergency Contact:</td>
+                    <td><input type="tel" name="emergency_contact"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
