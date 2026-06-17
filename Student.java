@@ -1,54 +1,50 @@
-package jdbc;
-	
-	import java.sql.Connection;
-	import java.sql.DriverManager;
-	import java.sql.Statement;
+package com.Ioc;
 
-	public class Student {
+public class Student {
 
-		// CRUD create read update delete with Statement
+	int id;
+	String name;
+	String city;
 
-		public void insertData() throws Exception {
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch426", "root", "root");
-			Statement s = con.createStatement();
-			int checked = s.executeUpdate("insert into student(id,name,city)values(127,'rutuja','delhi')");
-			if (checked > 0) {
-				System.out.println("Data inserted ... !");
-			} else {
-				System.err.println("Data NOT inserted ... !");
-			}
-			con.close();
-		}
+	public Student(int id, String name, String city) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.city = city;
+	}
 
-		public void deleteData() throws Exception {
+	public int getId() {
+		return id;
+	}
 
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch426", "root", "root");
-			Statement s = con.createStatement();
-			int checked = s.executeUpdate("delete from student where id = 125");
-			if (checked > 0) {
-				System.out.println("Data deleted ... !");
-			} else {
-				System.err.println("Data NOT deleted ... !");
-			}
-			con.close();
+	public void setId(int id) {
+		this.id = id;
+	}
 
-		}
+	public String getName() {
+		return name;
+	}
 
-		public void updateData() throws Exception {
+	public void setName(String name) {
+		this.name = name;
+	}
 
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch426", "root", "root");
-			Statement s = con.createStatement();
-			int checked = s.executeUpdate("update student set name ='Praful' city = 'nsk' where id = 126");
-			if (checked > 0) {
-				System.out.println("Data updated ... !");
-			} else {
-				System.err.println("Data NOT updated ... !");
-			}
-			con.close();
-		}
-	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + "]";
+	}
+
 }
